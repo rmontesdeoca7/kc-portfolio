@@ -1,0 +1,127 @@
+/* GENERAL STYLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+} 
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  width: 100%;
+}
+
+/* VARIABLES */
+:root {
+  --primary-color: #4169e1;
+  --white-color: #fff;
+  --black-color: #000;
+}
+
+/* GENERAL  */
+.btn {
+  display: inline-block;
+  padding: 13px 48px;
+}
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease; 
+}
+.btn.btn-primary:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+/* HEADER */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 70px;
+  background-color: #fff;
+  position: relative;
+}
+.hamburger{
+  cursor: pointer;
+}
+
+.burger-shower {
+  display: none;
+}
+
+.burger-shower:checked ~ .navbar-list {
+  display: block;
+}
+
+.navbar-list {
+  display:none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  padding: 0 1.5rem;
+}
+.navbar ul {
+  list-style: none;
+}
+
+/* .nav-list-container > .navbar-list{
+  list-style: none;
+  display: flex;
+} */
+
+/* .nav-list-container > .navbar-list > .navbar-item {
+  padding: 0 .5rem;
+}
+.nav-list-container > .navbar-list > .navbar-item > a {
+  text-decoration: none;
+  color: #000;
+} */
+
+/* MAIN */
+main {
+  padding: 0 1.5rem;
+}
+.title__section{
+  margin: 15px 0;
+}
+.title__section span{
+  text-transform: uppercase;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #333;
+  background-color: rgba(0,0,0,.05);
+}
+
+
+/* ABOUT ME */
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.about .about__article{
+  padding-bottom: 3rem;
+}
+.about > figure >.about__img {
+  box-shadow: 0px 0px 40px rgb(0 0 0 / 20%);
+}
+.about .about__title{
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+.about .about__description {
+  margin-bottom: 1.5rem;
+}
