@@ -16,6 +16,9 @@ a {
   text-decoration: none;
   color: #000;
 }
+a:hover{
+  color: #0f0f0f;
+}
 img {
   width: 100%;
 }
@@ -51,6 +54,9 @@ section {
 }
 
 /* HEADER */
+.menu-desktop{
+  display: none;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -72,7 +78,7 @@ section {
   display: block;
 }
 
-.navbar-list {
+.menu-mobile .navbar-list {
   display:none;
   position: absolute;
   top: 60px;
@@ -272,6 +278,18 @@ footer p {
 
 /* RESPONSIVE MEDIA QUERIES  1024px*/
 @media only screen and (min-width: 1024px) {
+  .menu-mobile{
+    display: none;
+  }
+  .menu-desktop {
+    display: block;
+  }
+  .menu-desktop .navbar-list{
+    display: flex;
+  }
+  .menu-desktop > .navbar-list > .navbar-item {
+    padding: 0 .5rem;
+  }
   main{
     max-width: 1024px;
     margin: 0 auto;
