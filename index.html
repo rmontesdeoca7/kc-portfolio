@@ -18,7 +18,7 @@
 <body>
  
   <!-- HEADER -->
-  <header>
+  <header id="header" class="header">
     <nav class="navbar">
       <div class="brand">
         <h1>RM</h1>
@@ -51,7 +51,7 @@
 					</li>
         </ul>
       </div>
-      
+
       <div class="menu-desktop">
         <ul class="navbar-list">
           <li class="navbar-item">
@@ -60,8 +60,11 @@
 					<li class="navbar-item">
 						<a href="#about">About me</a>
 					</li>
+          <li class="navbar-item">
+						<a href="#portfolio">Portfolio</a>
+					</li>
 					<li class="navbar-item">
-						<a href="#studies">Studies</a>
+						<a href="#skills">Skills</a>
 					</li>
 					<li class="navbar-item">
 						<a href="#experience">Experience</a>
@@ -79,6 +82,13 @@
   <main>
     <!-- BANNER -->
     <section class="banner">
+      <div class="banner-text-container">
+        <h2 class="banner__text">
+          Richard
+          <span>Montesdeoca</span>
+        </h2>
+        <p class="banner__description">Web developer</p>
+      </div>
       <picture class="banner__img">
         <source media="(min-width: 800px)"
           srcset="/img/bg-full.jpg"
@@ -120,15 +130,23 @@
           <img src="/img/portfolio/1.jpeg" alt="Project 1, oscus" class="card__img">
           <div class="portfolio__text">
             <h3 class="portfolio__subtitle">Oscus</h3>
-            <span class="portfolio__description">Cooperativa financiera</span>
+            <span class="portfolio__description">Financial operative</span>
           </div>
         </div>
 
         <div class="card">
-          <img src="/img/portfolio/1.jpeg" alt="Project 1, oscus" class="card__img">
+          <img src="/img/brands/ntt-data.png" alt="Project 1, oscus" class="card__img">
           <div class="portfolio__text">
-            <h3 class="portfolio__subtitle">Oscus</h3>
-            <span class="portfolio__description">Cooperativa financiera</span>
+            <h3 class="portfolio__subtitle">Ntt Data</h3>
+            <span class="portfolio__description">Software Company</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="/img/brands/bp.png" alt="Project 1, oscus" class="card__img">
+          <div class="portfolio__text">
+            <h3 class="portfolio__subtitle">Banco del Pichincha</h3>
+            <span class="portfolio__description">Bank</span>
           </div>
         </div>
 
@@ -200,7 +218,7 @@
     </section>
 
     <!-- SLIDER -->
-    <section class="carousel-container">
+    <section id="experience" class="carousel-container">
       <h5 class="title__section">
         <span>Brands</span>  
       </h5>
@@ -226,8 +244,62 @@
         <a class="carousel-dot" href="#slide4"></a>
       </div>
     </section>
-    <hr class="divider">
+    
 
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h5 class="title__section">
+        <span>Contact</span>  
+      </h5>
+      <h2 class="principal__title">Get it touch</h2>
+      <form action="/send-email" method="post"  class="form">
+        <div class="row">
+          <div class="left">
+            <input type="text" placeholder="Name" name="name" id="name" class="form-control" required>
+          </div>
+          <div class="rigth">
+            <input type="text" placeholder="Lastname" name="lastname" id="lastname" class="form-control" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <input type="text" placeholder="@github" name="github" id="github" class="form-control" pattern="^@[^\s]+" required>
+          </div>
+          <div class="rigth">
+            <input type="text" placeholder="Description máx 180 characters" name="description" id="description" class="form-control" required maxlength="180">
+          </div>
+        </div>
+        <div class="row">
+          <div class="left">
+            <input type="tel" placeholder="099999999" name="tel" id="tel" class="form-control" required>
+          </div>
+          <div class="rigth">
+            <h5>How did you meet me?</h5>
+            <div class="radio-button">
+              <input type="radio" value="University" name="meet" id="u" class="form-radio" required>
+              <label for="u">University</label>
+            </div>
+            <div class="radio-button">
+              <input type="radio" value="keepcoding Kick-off" name="meet" id="kc" class="form-radio" required>
+              <label for="kc">keepcoding Kick-off</label>
+            </div>
+            <div class="radio-button">
+              <input type="radio" value="School" name="meet" id="s" class="form-radio" required>
+              <label for="s">School</label>
+            </div>
+            <div class="radio-button">
+              <input type="radio" value="Github" name="meet" id="gh" class="form-radio" required>
+              <label for="gh">Github</label>
+            </div>
+          </div>
+        </div>
+        <div class="send">
+          <input value="Send Message" type="submit">
+        </div>
+      </form>
+    </section>
+
+    <hr class="divider">
   </main>
 
   <!-- FOOTER -->
